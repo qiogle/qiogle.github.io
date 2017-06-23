@@ -1,5 +1,7 @@
-# Hello
+# Hi
 
-These are the training docs for the Jetty Customer Experience team. 
+The goal of these docs is to:
++ Transfer procedures 
++ 
 
 Last update: 6/23/17
