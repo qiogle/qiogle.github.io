@@ -1,8 +1,4 @@
-# Getting Started
-
-Welcome! 
-
-## Structure of this guide
+# Overview
 
 **Tools and Procedures** describes processes that customer service is responsible for (e.g. 'what to do when x happens') and the tools we use to make that happen. 
 
@@ -13,7 +9,7 @@ Welcome!
 **Thoughts** is a place to put ideas, open questions, and any other thoughts
 
 
-## Where to find more information
+### More information
 
 + Jetty Google Drive: see Customer Experience folder
 + Jetty Dropbox

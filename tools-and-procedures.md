@@ -8,7 +8,7 @@ We use two Zendesk products:
 
 ### Support
 
-If you're new to Zendesk, you can reference their support site and [Getting Started Guide][4] while reading this documentation to understand Zendesk definitions and concepts. You might also find it helpful to dedicate 15 minutes before reading this to the getting started guide above.
+If you're new to Zendesk, you can reference their support site and [Getting Started Guide][4] while reading this documentation to understand Zendesk definitions and concepts.
 
 ##### Ticket Workflow
 
@@ -16,15 +16,18 @@ See diagram [here][8].
 
 ##### Macros
 
-TODO
+Shortcut for series of repetitive actions. Current macros include: 
++ Payment failed: sets status to pending, assigns ticket to current user, populates body and subject with text that says his/her payment has failed.
++ Valuables reminder: sent to people who are late on uploading valuables verification
 
 ##### Triggers
 
-TODO
+Automatic action that happens when certain conditions are met. For example: 
++ Agent comments publicly on a ticket &rarr; user is notified with a Jetty branded email. Text of the email depends on the context (i.e. whether ticket has been solved). 
 
 ##### Net Promoter Score
 
-We currently use a homemade Google form to administer NPS surveys after he/she has an interaction with customer experience. A link to the form is included in the Zendesk email sent to the customer after his/her ticket has been marked 'solved'. 
+We currently use a homemade Google form to administer NPS surveys to a customer after an interaction with customer experience. A link to the form is included in the Zendesk email sent to the customer after the ticket has been marked 'solved'. 
 
 The survey is [here][6]. 
 
@@ -40,12 +43,12 @@ Located [here][10].
 
 ### Help Center
 
-TODO
+Zendesk Help Center is where we manage 50 FAQ articles located on our site at [www.jetty.com/faq](www.jetty.com/faq). 
 
-Source of truth are the articles themselves 
+Source of truth: articles themselves.
 
 `Reference`
-+ 
++ [Help Center][15]
 
 
 ## Britecore
@@ -61,6 +64,7 @@ Intercom is our chat tool. We subcribe to their 'Respond' and 'Engage' modules. 
 
 ## Metabase
 
+Friendly database viewer. 
 
 ## Others
 
@@ -71,6 +75,8 @@ Calendly is a scheduling tool used to schedule meetings with external contacts. 
 Tracking calls here: [Google Sheet][9]
 
 ### Glossary
+
+Created around 40 definitions. Managed on [Wordpress][16] and hosted on [www.jetty.com/101/glossary][www.jetty.com/101/glossary]
 
 ### Facebook
 
@@ -96,7 +102,7 @@ Notify the technical point of contact. Currently through the #tech_general slack
 > If a customer wants a policy change
 
 1. *(Optional)* Email customer acknowledging receipt and 
-2. Make changes in Britecore
+2. Make changes in Britecore. See [Britecore](#Britecore) section for change-specific details.
 3. Regenerate Jetty branded declaration page
 4. Email customer to confirm that it's finished
 
@@ -152,3 +158,5 @@ I documented the pro/con analysis behind our current software stack. See [Softwa
 [12]: https://docs.google.com/document/d/1NwEyjH8mligR8HlbVyTZsOQyR4n61ux8L5WragSnot4/edit#
 [13]: https://www.groovehq.com/support/how-to-deal-with-an-angry-customer
 [14]: https://segment.com/blog/measuring-the-roi-of-support/#how-much-does-our-success-team-cost-
+[15]: https://jetty.zendesk.com/hc/en-us
+[16]: https://www.jetty.com/blog/wp-admin/
