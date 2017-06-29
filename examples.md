@@ -4,11 +4,14 @@ Repository of examples to demonstrate concepts or provide a starting point
 
 ## Friendly 
 
+
+
+***
+
 ## Being a helpful human 
 
 For questions outside of insurance scope but within human scope!
 
-* * *
 ##### Customer asked how to change majors at her school (likely wrong recipient)
 `Customer` 
 
@@ -33,6 +36,23 @@ Karen
 
 ## Being proactive
 
+##### Customer emails to correct a typo in her personal information, agent noticies other typos
+`Customer` 
+
+My address zip code is incorrect it should b 60611
+
+`Jetty Agent`
+
+Thanks for letting us know! I've corrected that for you.
+
+I wanted to check a couple more things to make sure you're properly covered: 
+1) You listed your address as "850 South Lake Shore Drive", which our maps are showing as a park. Is it possible you meant 850 North Lake Shore Drive?  
+2) I noticed your email is "warrennoel@yahoo.com" and the name on your account is "Warren Nowl". Does this look correct? 
+3) We heard from your leasing agent about adding "North Lake Shore Drive Realty Company LLC" as an additional interest and wanted to confirm that with you. 
+
+Let me know,
+
+Karen
 
 ## Other stuff
 |  | Introduce concepts with an example                                                                                       |

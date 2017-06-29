@@ -16,14 +16,15 @@ See diagram [here][8].
 
 ##### Macros
 
-Shortcut for series of repetitive actions. Current macros include: 
+Shortcut for series of repetitive actions. Customizable [here][18]. Current macros include: 
 + Payment failed: sets status to pending, assigns ticket to current user, populates body and subject with text that says his/her payment has failed.
-+ Valuables reminder: sent to people who are late on uploading valuables verification
++ Valuables reminder: sent to people who are late on uploading valuables verification. We already send a series of three automatic reminder emails, so sending this manually through Zendesk is a last ditch effort in special cases. 
 
 ##### Triggers
 
-Automatic action that happens when certain conditions are met. For example: 
+Automatic action that happens when certain conditions are met. Customizable [here][17]. For example: 
 + Agent comments publicly on a ticket &rarr; user is notified with a Jetty branded email. Text of the email depends on the context (i.e. whether ticket has been solved). 
++ Agent sets the status of a comment to 'solved' &rarr; user is not notified
 
 ##### Net Promoter Score
 
@@ -35,9 +36,9 @@ The survey is [here][6].
 
 ##### Batch Emails
 
-I wrote a Python script that calls Zendesk's API to send batch tickets. I recently used it with the NJ pricing change, which affected 26 customers and for each, required the creation of a ticket with dynamic variables populated with personal infomation, such as refund amount. 
+I wrote a Python script that calls Zendesk's API to send batch tickets. I used it with the June NJ pricing change, which affected 26 customers and for each, required the creation of a ticket with dynamic variables populated with personal infomation, such as refund amount. 
 
-It's non-engineer code quality, but might be useful as reference for another non-engineer. 
+It's non-engineer code quality, so might be useful as reference for another non-engineer.
 
 Located [here][10]. 
 
@@ -64,7 +65,7 @@ Intercom is our chat tool. We subcribe to their 'Respond' and 'Engage' modules. 
 
 ## Metabase
 
-Friendly database viewer. 
+Friendly [database viewer][20]. Can write queries in SQL or use their UI. 
 
 ## Others
 
@@ -76,11 +77,34 @@ Tracking calls here: [Google Sheet][9]
 
 ### Glossary
 
-Created around 40 definitions. Managed on [Wordpress][16] and hosted on [www.jetty.com/101/glossary][www.jetty.com/101/glossary]
+Created around 40 definitions. Managed on [Wordpress][16] and hosted on [www.jetty.com/101/glossary](www.jetty.com/101/glossary)
 
 ### Facebook
 
 Checking and responding to customer comments on our posts. 
+
+### Fullstory
+
+Watch user sessions. Powerful search you can use to find the session you're looking for: in the ideal case, when email is known, you can search by email address. Otherwise, you can narrow down the list with city, state, or actions (if you know they were on a certain page or clicked a certain button) and go through the remaining sessions. 
+
+Some sessions/events are not recorded but Fullstory fills in most of the gaps. 
+
+### Auth0
+ 
+#### Login as User
+
+Login as specified user
++ Find user
++ Press 'Sign in as user' and core-api management
++ Choose 'https://www.jetty.com/app/login' as Callback URL
++ Press open button next to client-side app (nothing happens if you click the one next to server-side app)
+
+### Stripe
+
+Used to: 
++ Refund payments - e.g. customer changes from annual to monthly plan, customer cancels
++ Get receipt of refund
++ Add card if unable to collect on app — foreign billing address or technical issues
 
 ### Important Files
 
@@ -93,16 +117,16 @@ Checking and responding to customer comments on our posts.
 
 Try to come up with a naive solution to each issue, to help the brainstorming process. Format up to you. 
 
-My issue log [here][12].
+My issue log [here][12]. 
 
 > If a customer reports a technical error - *page wont load, can't click button*
 
-Notify the technical point of contact. Currently through the #tech_general slack channel. 
+Notify the technical point of contact. Currently through the #tech_general slack channel. Use [Fullstory](#Fullstory) to get more information. 
 
 > If a customer wants a policy change
 
-1. *(Optional)* Email customer acknowledging receipt and 
-2. Make changes in Britecore. See [Britecore](#Britecore) section for change-specific details.
+1. *(Optional)* Email customer acknowledging receipt  
+2. Make changes in Britecore. See [Britecore](#Britecore) section for how to change.
 3. Regenerate Jetty branded declaration page
 4. Email customer to confirm that it's finished
 
@@ -110,16 +134,24 @@ Notify the technical point of contact. Currently through the #tech_general slack
 
 Update FAQ 'Where is Jetty Available' Zendesk article [here][11]. 
 
-> Choosing new software
+> If we're looking for new software
 
-I documented the pro/con analysis behind our current software stack. See [Software Stack][3] for links out to anaylsis by functional area. 
+I documented the pro/con analysis behind our current software stack - could work as a reference. See [Software Stack][3] for links out to these docs. 
+
+> Giving people quotes for additional coverage
+
+1. Go on their policy on Britecore
+2. Create new revision
+3. In 'Builder' tab, change coverage amounts
+4. Press 'Rate and Save' at bottom to see impact on price
+5. Delete revision
 
 ## Perspective
 
 ### Agents
 + Transparent: better to overcommunicate - let customers know when they should expect to hear back. Open a channel of communication. 
 + Forward-thinking: expect the user to make errors or not fully understand the problem. Provide contextual next steps. 
-+ Conversational: 
++ Conversational
 
 ### Customers
 + Tend to be relatively unfamiliar with insurance than other consumer products. As a result, more likely to postpone or give up. 
@@ -131,8 +163,7 @@ I documented the pro/con analysis behind our current software stack. See [Softwa
 
 ## Language
 
-+ Switch to customer-facing vocabulary
-	- "Checkout flow", "conversion", and other company jargon may seem foreign and cold to customers
++ Switch to customer-facing vocabulary: "Checkout flow", "conversion", and other company jargon may seem foreign and cold to customers
 
 
 ## Adding or changing processes
@@ -145,8 +176,8 @@ I documented the pro/con analysis behind our current software stack. See [Softwa
 
 
 [1]: https://briteedu.squarespace.com/
-[2]: https://docs.google.com/spreadsheets/d/1HMdRz2aLdiYW2p3gyMOrNXM9f7nZJaN58dSP6pvdQBU/edit#gid=937495940
-[3]: https://docs.google.com/spreadsheets/d/19JcM5BfVaNECSbxniXlsXY9G8H523OoHGMdGzO58s4E/edit#gid=0
+[2]: https://docs.google.com/spreadsheets/d/19JcM5BfVaNECSbxniXlsXY9G8H523OoHGMdGzO58s4E/edit#gid=0
+[3]: https://docs.google.com/spreadsheets/d/1HMdRz2aLdiYW2p3gyMOrNXM9f7nZJaN58dSP6pvdQBU/edit#gid=937495940
 [4]: https://support.zendesk.com/hc/en-us/articles/203921213
 [5]: https://docs.google.com/document/d/1G-Z1EulI0vzjHhu8JsMsLqkY8R96yN52NsG1v3sse0A/edit#
 [6]: https://docs.google.com/a/jetty.com/forms/d/1h8WAbeS5ypXtFcyYh9gfOdyV0GFfgcy8O60IyzYat58/edit
@@ -157,6 +188,9 @@ I documented the pro/con analysis behind our current software stack. See [Softwa
 [11]: https://jetty.zendesk.com/hc/en-us/articles/115003920667-Where-is-Jetty-available-
 [12]: https://docs.google.com/document/d/1NwEyjH8mligR8HlbVyTZsOQyR4n61ux8L5WragSnot4/edit#
 [13]: https://www.groovehq.com/support/how-to-deal-with-an-angry-customer
-[14]: https://segment.com/blog/measuring-the-roi-of-support/#how-much-does-our-success-team-cost-
+[14]: https://segment.com/blog/measuring-the-roi-of-support/#how-much-does-our-success-team-cost
 [15]: https://jetty.zendesk.com/hc/en-us
 [16]: https://www.jetty.com/blog/wp-admin/
+[17]: https://jetty.zendesk.com/agent/admin/triggers
+[18]: https://jetty.zendesk.com/agent/admin/macros
+[20]: http://jetty-metabase.us-east-1.elasticbeanstalk.com/
