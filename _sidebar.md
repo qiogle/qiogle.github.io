@@ -1,6 +1,5 @@
 - [Home](/)
 - [Overview](getting-started.md)
 - [Tools and Procedures](tools-and-procedures.md)
-- [Examples](examples.md)
-- [Answers and Tips](questions.md)
+- [Examples and Common Questions](examples.md)
 - [Thoughts](thoughts.md)

@@ -150,7 +150,7 @@ I documented the pro/con analysis behind our current software stack - could work
 
 ### Agents
 + Transparent: better to overcommunicate - let customers know when they should expect to hear back. Open a channel of communication. 
-+ Forward-thinking: expect the user to make errors or not fully understand the problem. Provide contextual next steps. 
++ Forward-thinking: expect the user to make errors, not fully understand the problem, not know what questions to ask, etc. Provide contextual next steps. 
 + Conversational
 
 ### Customers
@@ -160,6 +160,10 @@ I documented the pro/con analysis behind our current software stack - could work
 ### Other stuff
 
 + [Service recovery paradox][13]: When a very positive service recovery causes a level of customer satisfaction greater than that expected if no service failure had happened.
++ Proactive vs reactive conversations: (reactive) what can we help you with today? (proactive) are you looking for help with purchasing a chair? 
+Data comes from
+Linking customer with recorded website activity
+
 
 ## Language
 

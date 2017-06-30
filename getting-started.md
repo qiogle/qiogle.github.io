@@ -11,5 +11,11 @@
 
 ### More information
 
++ Knowledge dump here (control-f to find answers): [Common Questions and Responses][1]
++ Search through Zendesk history
++ Search through Intercom history
 + Jetty Google Drive: see Customer Experience folder
 + Jetty Dropbox
+
+
+[1]: https://docs.google.com/document/d/1yv51HinZ9kqDlqnspF3_Cxonq364fckKPOe9g35Q5Ik/edit

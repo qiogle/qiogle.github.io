@@ -1,3 +1,5 @@
+<!-- Moved to examples.md -->
+
 # FAQ and Tips
 
 ## General

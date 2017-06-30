@@ -1,6 +1,6 @@
 # Thoughts
 
-A place to put half-formed ideas, open questions, and any other thoughts
+Random thoughts
 
 #### Learning experience
 
@@ -25,7 +25,8 @@ A place to put half-formed ideas, open questions, and any other thoughts
 #### Review and training
 
 + Review tickets every x days
-+ Practice tickets that are representative of case types
++ Practice tickets that are representative of case types: unclear, upset 
+
 
 #### Should we offer phone support?
 
